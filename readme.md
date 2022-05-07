@@ -8,5 +8,6 @@ Type tsc to javascript
 
 Link your compiled bundle.js into your HTML-Files.
 
-
+T2 Projekt: Drag and Drop 
+Heiko König ON21
 
