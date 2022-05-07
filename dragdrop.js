@@ -84,6 +84,19 @@ function swapItems(fromIndex, toIndex) {
     listItems[toIndex].appendChild(itemOne);
 }
 
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const countryName = listItem.querySelector('.draggable').innerText.trim();
+
+    if(countryName !== countrysize[index]) {
+      listItem.classList.add('wrong');
+    } else {
+      listItem.classList.remove('wrong');
+      listItem.classList.add('right');
+    }
+  });
+}
+
 function addEventListeners() {
     const draggables = document.querySelectorAll('.draggable');
     const dragListItems = document.querySelectorAll('.draggable-list li');
@@ -99,3 +112,5 @@ function addEventListeners() {
         item.addEventListener('dragleave', dragLeave);
     });
 }
+
+check.addEventListener('click', checkOrder);
