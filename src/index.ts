@@ -3,8 +3,11 @@
 import { helloWorld, Beispiel } from "./myModule";
 import { alertMe } from "./myOtherModule";
 
+
 console.log(helloWorld);
 customElements.define("my-beispiel", Beispiel);
+
+console.log(draggable_list);
 
 alertMe();
 
@@ -22,3 +25,4 @@ function doSmth(e: UIEvent) {
   const val = e.target as HTMLInputElement;
   console.log(e, val.value);
 }
+

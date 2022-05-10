@@ -12,7 +12,7 @@
 
     // THIS IS A MODULE
     function alertMe() {
-        alert("ATTENTION PLEASE");
+        alert("SPIELREGELN - Ordne die Länder nach ihrer Größe - Clicke auf den Button, um die Reihenfolge zu kontrollieren - Grün= Richtig - Rot=Falsch");
     }
 
     //THIS IS THE ENTRY FILE - WRITE YOUR MAIN LOGIC HERE!
