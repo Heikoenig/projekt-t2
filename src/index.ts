@@ -4,8 +4,7 @@ import { createList } from "./myModule";
 
 let listItems: HTMLElement[] = [];
 
-console.log(draggable_list);
-
+const check = document.getElementById("check") as HTMLButtonElement;
 
 let dragStartIndex: number = 0;
 
@@ -50,6 +49,27 @@ const dragDrop = (e: Event, item: Element): void => {
   item.classList.remove("over");
 };
 
+const addEventListeners = (): void => {
+  const draggables = document.querySelectorAll(".draggable");
+  const dragListItems = document.querySelectorAll(".draggable-list li");
+
+  draggables.forEach((draggable) => {
+    draggable.addEventListener("dragstart", (e) => dragStart(e, draggable));
+  });
+
+  dragListItems.forEach((item) => {
+    item.addEventListener("dragover", dragOver);
+    item.addEventListener("drop", (e) => dragDrop(e, item));
+    item.addEventListener("dragenter", (e) => dragEnter(e, item));
+    item.addEventListener("dragleave", (e) => dragLeave(e, item));
+  });
+};
+
+(async () => {
+  listItems = await createList(countrysize);
+  addEventListeners();
+})();
+
 const swapItems = (fromIndex: number, toIndex: number) => {
   const itemOne = listItems[fromIndex].querySelector(".draggable");
   const itemTwo = listItems[toIndex].querySelector(".draggable");
@@ -70,20 +90,5 @@ const checkOrder = (): void => {
   });
 };
 
-const addEventListeners = (): void => {
-  const draggables = document.querySelectorAll(".draggable");
-  const dragListItems = document.querySelectorAll(".draggable-list li");
-
-  draggables.forEach((draggable) => {
-    draggable.addEventListener("dragstart", (e) => dragStart(e, draggable));
-  });
-
-  dragListItems.forEach((item) => {
-    item.addEventListener("dragover", dragOver);
-    item.addEventListener("drop", (e) => dragDrop(e, item));
-    item.addEventListener("dragenter", (e) => dragEnter(e, item));
-    item.addEventListener("dragleave", (e) => dragLeave(e, item));
-  });
-};
-
 check.addEventListener("click", checkOrder);
+
