@@ -1,15 +1,6 @@
 (function () {
     'use strict';
 
-    // THIS IS A MODULE!
-    const helloWorld = "Drag and Drop Spiel";
-    class Beispiel extends HTMLElement {
-        constructor() {
-            super();
-            this.innerHTML = "<h1>Drag and Drop Spiel</h1>";
-        }
-    }
-
     // THIS IS A MODULE
     function alertMe() {
         alert("SPIELREGELN - Ordne die Länder nach ihrer Größe - Clicke auf den Button, um die Reihenfolge zu kontrollieren - Grün= Richtig - Rot=Falsch");

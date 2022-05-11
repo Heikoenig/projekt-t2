@@ -8,10 +8,12 @@ Type tsc to javascript
 
 Link your compiled bundle.js into your HTML-Files.
 
-T2 Projekt: Drag and Drop 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+T2 Projekt: Drag and Drop Spiel (Ländergrößen)
 Heiko König ON21
 
 Quellen:
 // https://www.youtube.com/watch?v=wv7pvH1O5Ho
 // https://fonts.google.com/specimen/Oswald#standard-styles
-//
+// https://www.tutorialsteacher.com/typescript/converting-javascript-to-typescript
+// https://www.digitalocean.com/community/tutorials/how-to-use-functions-in-typescript
