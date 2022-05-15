@@ -114,3 +114,5 @@
 // }
 
 // check.addEventListener("click", checkOrder);
+
+// Aus Video Tutorial:/YouTube: Traversy Media (2021): JavaScript Drag & Drop Sortable List Project, https://www.youtube.com/watch?v=wv7pvH1O5Ho , [Stand: 15.05.2022]
